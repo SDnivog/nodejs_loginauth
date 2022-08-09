@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "4b34053c-8fdc-4cae-b32d-907abf968ea7",
+		"name": "NodeJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17787258"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"MyUserName\",\n    \"password\":\"1234\",\n    \"first_name\":\"Go\",\n    \"last_name\":\"S\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"MyUserName\",\n    \"password\":\"1234\",\n    \"first_name\":\"Go\",\n    \"last_name\":\"S\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"118-Qt9C9tR6k9gYcGhSXXXXz6XsPTM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Aug 2022 12:05:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjI0ZGEwMjU2YTAyZGMxZjBjM2RhOSIsInVzZXJuYW1lIjoiTXlVc2VyTmFtZSIsImlhdCI6MTY2MDA0Njc1MiwiZXhwIjoxNjYwMDQ4NTUyfQ.N6Ze6shOAwJwymXTwRz20CyFVv2y9hy6B-hqj5K20Sk\",\n    \"name\": \"MyUserName\",\n    \"msg\": \"Successfully registered\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetOneData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjI0ZGEwMjU2YTAyZGMxZjBjM2RhOSIsInVzZXJuYW1lIjoiTXlVc2VyTmFtZSIsImlhdCI6MTY2MDA0Njc4NSwiZXhwIjoxNjYwMDQ3Mzg1fQ.JJy4pu4FnULdGfx7u3aru9LeQOvz5xMITYJ6KDiVlx4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/my-account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"my-account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetOneData",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/my-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"my-account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"43-mGCTWnwJgX15+Ju4CiPujUR62Fc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Aug 2022 12:06:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"name\": \"MyUserName\",\n    \"msg\": \"Successfully authorised\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LogIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"MyUserName\",\n    \"password\":\"1234\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LogIn",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"MyUserName\",\n    \"password\":\"1234\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "278"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"116-x/hjl101JY9I4n6OJgUgh69pEnY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Aug 2022 12:06:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjI0ZGEwMjU2YTAyZGMxZjBjM2RhOSIsInVzZXJuYW1lIjoiTXlVc2VyTmFtZSIsImlhdCI6MTY2MDA0Njc4NSwiZXhwIjoxNjYwMDQ3Mzg1fQ.JJy4pu4FnULdGfx7u3aru9LeQOvz5xMITYJ6KDiVlx4\",\n    \"name\": \"MyUserName\",\n    \"msg\": \"Successfully loggedin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "AllRecords",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjI0ZGEwMjU2YTAyZGMxZjBjM2RhOSIsInVzZXJuYW1lIjoiTXlVc2VyTmFtZSIsImlhdCI6MTY2MDA0Njc4NSwiZXhwIjoxNjYwMDQ3Mzg1fQ.JJy4pu4FnULdGfx7u3aru9LeQOvz5xMITYJ6KDiVlx4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
